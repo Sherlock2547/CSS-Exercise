@@ -1,0 +1,53 @@
+<!--
+ * @Author: William-Zhou
+ * @Date: 2020-08-29 21:01:45
+ * @LastEditTime: 2020-08-29 23:01:46
+ * @LastEditors: William-Zhou
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="display">
+            <div class="time"></div>
+        </div>
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+        setInterval(() => {
+            const time = document.querySelector(".time");
+            let date = new Date();
+            let hours = date.getHours();
+            let mintues = date.getMinutes();
+            let secends = date.getSeconds();
+            let day_night = "AM";
+            if (hours > 12) {
+                day_night = "PM";
+                hours = hours - 12;
+            }
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (mintues < 10) {
+                mintues = "0" + mintues;
+            }
+            if (secends < 10) {
+                secends = "0" + secends;
+            }
+            time.textContent = hours + ":" + mintues + ":" + secends + " " + day_night;
+        });
+    </script>
+</body>
+
+</html>
