@@ -1,0 +1,66 @@
+<!--
+ * @Author: William-Zhou
+ * @Date: 2020-08-13 13:04:03
+ * @LastEditTime: 2020-08-13 14:16:45
+ * @LastEditors: William-Zhou
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页页面设计</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="logo">Creative</div>
+        <img src="bg.jpg" class="bg">
+        <div class="content">
+            <h2>Let's Make<br>Something Creative</h2>
+            <p>Whether you need talented photographers, creative videographers or someone to edit your existing footage, Something Creative can help.Great copy is everything. It connects your brand, your products and your company to your customers. Let Something
+                Creative draft content that connects.
+            </p>
+            <a href="#">Get Started</a>
+        </div>
+        <p class="copyrightText">©2020. Zhou.W.L</p>
+    </section>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="sociaBar">
+            <ul>
+                <li>
+                    <a href="#"><img src="facebook.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="twitter.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="instagram.png"></a>
+                </li>
+            </ul>
+            <a href="mailto:309084943@qq.com" class="emailBox"><img src="email.png" alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.menuToggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

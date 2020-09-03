@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+
+.wrapper {
+    height: 60px;
+    width: 55vw;
+    /* 使用百分比设置行高 */
+    line-height: 60px;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper nav {
+    display: flex;
+    position: relative;
+}
+
+.wrapper nav label {
+    /* 让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容 */
+    flex: 1;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.wrapper nav label a {
+    position: relative;
+    z-index: -1;
+    color: #1d1f20;
+    font-size: 20px;
+    font-weight: 500;
+    user-select: none;
+    text-decoration: none;
+    transition: color 0.6s ease;
+}
+
+.wrapper nav label a i {
+    font-size: 25px;
+    margin: 0 7px;
+}
+
+.wrapper nav .tab {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    /* 颜色线性渐变 */
+    background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+    border-radius: 50px;
+    /* 贝塞尔曲线:x1,y1,x2,y2 x1和x2需要是 0 到 1 的数字。 */
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.265, 1.55);
+}
+
+.wrapper nav #home:checked~label.home a,
+.wrapper nav #inbox:checked~label.inbox a,
+.wrapper nav #contact:checked~label.contact a,
+.wrapper nav #heart:checked~label.heart a,
+.wrapper nav #about:checked~label.about a {
+    color: #fff;
+}
+
+.wrapper nav #inbox:checked~.tab {
+    left: 20%;
+}
+
+.wrapper nav #contact:checked~.tab {
+    left: 40%;
+}
+
+.wrapper nav #heart:checked~.tab {
+    left: 60%;
+}
+
+.wrapper nav #about:checked~.tab {
+    left: 80%;
+}
+
+.wrapper nav input {
+    display: none;
+}

@@ -1,0 +1,69 @@
+<!--
+ * @Author: William-Zhou
+ * @Date: 2020-08-20 10:45:42
+ * @LastEditTime: 2020-08-20 12:50:50
+ * @LastEditors: William-Zhou
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视差网页设计</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">World</a>
+            <div class="toggle"></div>
+        </header>
+        <img src="bg.jpg" class="bg">
+        <img src="bird.png" class="brid">
+        <div class="content">
+            <h2>We can save The<br><span>Earth</span></h2>
+            <p>Greenhouse gas emissions are rising, scientists’ extreme weather predictions appear to be coming true, the air in our cities is becoming dangerous, groundwater is getting scarce.</p>
+            <a href="#">Join Us</a>
+        </div>
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="facebook.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png"></a>
+            </li>
+        </ul>
+        <div class="textBlocks">
+            <div class="block">
+                <h3>Defenders of Earth</h3>
+                <p>Mandrake's assistant and bodyguard, depicted as a powerful fighter, an able mechanic, and a master tactician.</p>
+            </div>
+            <div class="block">
+                <h3>How to save Water</h3>
+                <p>Mandrake's assistant and bodyguard, depicted as a powerful fighter, an able mechanic, and a master tactician.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("mousemove", function(e) {
+            const bg = document.querySelector('.bg');
+            const brid = document.querySelector('.brid');
+            const content = document.querySelector('.content');
+
+            bg.style.width = 100 + e.pageX / 100 + '%';
+            bg.style.height = 100 + e.pageX / 100 + '%';
+
+            brid.style.right = 100 + e.pageX / 2 + 'px';
+
+            content.style.left = 100 + e.pageX / 2.2 + 'px';
+        })
+    </script>
+</body>
+
+</html>
