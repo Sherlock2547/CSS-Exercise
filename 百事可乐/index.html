@@ -1,0 +1,76 @@
+<!--
+ * @Author: William-Zhou
+ * @Date: 2020-08-30 09:06:47
+ * @LastEditTime: 2020-08-30 19:36:50
+ * @LastEditors: William-Zhou
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <a href="https://www.pepsico.com/"><img src="logo.png" alt="" class="logo"></a>
+            <ul>
+                <li>
+                    <a href="#">Home</a></li>
+                <li>
+                    <a href="#">Products</a></li>
+                <li>
+                    <a href="#">What's new</a></li>
+                <li>
+                    <a href="#">Newsletter</a></li>
+                <li>
+                    <a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>This reflects our ambition to win sustainably in the marketplace and accelerate our top line growth, whilst keeping our commitment to do good for the planet and our communities. Discover more about our products, their nutrition information
+                    and where to buy : </p>
+                <a href="https://www.pepsico.com/brands/product-information">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="pepsi001.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="pepsi001.png" onclick="imgSlider('pepsi001.png');changeBgColor('#0062be')"></li>
+            <li><img src="pepsi002.png" onclick="imgSlider('pepsi002.png');changeBgColor('#e60c2c')"></li>
+            <li><img src="pepsi003.png" onclick="imgSlider('pepsi003.png');changeBgColor('#1e1e1e')"></li>
+        </ul>
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+    <script>
+        function imgSlider(anything) {
+            document.querySelector(".pepsi").src = anything;
+        }
+
+        function changeBgColor(color) {
+            const sec = document.querySelector(".sec");
+            sec.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
