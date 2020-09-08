@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06181f;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .icon {
+    width: 200px;
+}
+
+.container .icon path {
+    fill: transparent;
+    stroke-width: 10;
+    stroke: #31e8ff;
+}
+
+
+/* 点赞 */
+.container .icon.like path {
+    stroke-dasharray: 1560;
+    stroke-dashoffset: 0;
+}
+
+.container .icon.like:hover path {
+    animation: animate-like 2s linear forwards;
+}
+
+@keyframes animate-like {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1560;
+    }
+
+    80% {
+        stroke-dashoffset: 3120;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #31e8ff;
+    }
+
+}
+
+/* 心心 */
+.container .icon.heart path {
+    stroke-dasharray: 1560;
+    stroke-dashoffset: 0;
+}
+
+.container .icon.heart:hover path {
+    animation: animate-heart 2s linear forwards;
+}
+
+@keyframes animate-heart {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1560;
+    }
+
+    80% {
+        stroke-dashoffset: 3120;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #31e8ff;
+    }
+
+}
+
+/* 星星 */
+.container .icon.star path {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.container .icon.star:hover path {
+    animation: animate-star 2s linear forwards;
+}
+
+@keyframes animate-star {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1560;
+    }
+
+    80% {
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #31e8ff;
+    }
+
+}
