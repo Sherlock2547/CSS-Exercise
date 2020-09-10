@@ -1,0 +1,118 @@
+<!--
+ * @Author: William-Zhou
+ * @Date: 2020-09-10 09:21:35
+ * @LastEditTime: 2020-09-10 09:55:52
+ * @LastEditors: William-Zhou
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4"></div>
+            <div class="x5"></div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4"></div>
+            <div class="x5"></div>
+        </div>
+        <div class="item">
+            <div class="x1">老</div>
+            <div class="x2">老</div>
+            <div class="x3">老</div>
+            <div class="x4">老</div>
+            <div class="x5">老</div>
+        </div>
+        <div class="item">
+            <div class="x1">师</div>
+            <div class="x2">师</div>
+            <div class="x3">师</div>
+            <div class="x4">师</div>
+            <div class="x5">师</div>
+        </div>
+        <div class="item">
+            <div class="x1">好</div>
+            <div class="x2">好</div>
+            <div class="x3">好</div>
+            <div class="x4">好</div>
+            <div class="x5">好</div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2">我</div>
+            <div class="x3">我</div>
+            <div class="x4">我</div>
+            <div class="x5">我</div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3">叫</div>
+            <div class="x4">叫</div>
+            <div class="x5">叫</div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4">何</div>
+            <div class="x5">何</div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4">同</div>
+            <div class="x5">同</div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4">学</div>
+            <div class="x5">学</div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4"></div>
+            <div class="x5"></div>
+        </div>
+        <div class="item">
+            <div class="x1"></div>
+            <div class="x2"></div>
+            <div class="x3"></div>
+            <div class="x4"></div>
+            <div class="x5"></div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.item').each(function () {
+            //获取当前Item元素下标
+            let index = $(this).index();
+            //起始时间
+            let start = 2.8;
+            //获取x5
+            $(this).find('.x5').css('animation-delay', start + index / 10 + 's');
+        })
+    </script>
+</body>
+
+</html>

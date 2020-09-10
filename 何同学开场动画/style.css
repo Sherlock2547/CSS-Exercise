@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+body,
+.container {
+    height: 100vh;
+}
+
+.container .item {
+    width: 8.3333%;
+    float: left;
+    height: 100%;
+    text-align: center;
+    line-height: 100vh;
+    position: relative;
+    font-size: 60px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.item div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    color: #fff;
+}
+
+.container .item .x1 {
+    background: #e67e22;
+    animation: width 0.6s 0s linear forwards;
+}
+
+.container .item .x2 {
+    background: #68a4ff;
+    animation: width 0.6s 0.7s linear forwards;
+}
+
+.container .item .x3 {
+    background: #14e630;
+    animation: width 0.6s 1.4s linear forwards;
+}
+
+.container .item .x4 {
+    background: #ff3077;
+    animation: width 0.6s 2.1s linear forwards;
+}
+
+.container .item .x5 {
+    background: #300c52;
+    animation: width 0.6s linear forwards;
+}
+
+
+
+@keyframes width {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
